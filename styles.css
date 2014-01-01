@@ -1,0 +1,21 @@
+html {
+	font-size: 24px; 
+	line-height: 1.4;
+}
+
+.image-container {
+	position: relative; 
+	height: 0; 
+	overflow: hidden; 
+	/* This padding defines the aspect ratio of the aperture. A lower % value gives a shorter aperture and a more pronounced scrolling effect */
+	padding-bottom: 20%;
+}
+
+img { 
+	position: absolute;
+	bottom: 0; 
+	max-width: 100%; 
+	/* Give the image a translate3d value immediately so that it's put onto its own rendering layer on document load, rather than on scroll, to make it feel smoother */
+	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
+}
